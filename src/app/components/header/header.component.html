@@ -1,0 +1,134 @@
+<header id="js-header" class="u-header u-header--sticky-top u-header--toggle-section u-header--change-appearance" data-header-fix-moment="300">
+  <div class="u-header__section u-header__section--light g-bg-white g-transition-0_3 g-py-10" data-header-fix-moment-exclude="g-py-10" data-header-fix-moment-classes="u-shadow-v18 g-py-0">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Responsive Toggle Button -->
+        <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-3 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+              <span class="hamburger hamburger--slider">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+              </span>
+              </span>
+        </button>
+        <!-- End Responsive Toggle Button -->
+
+        <!-- Logo -->
+        <a href="../../../index.html" class="navbar-brand">
+          <img src="assets/img/icon-512x512.png" style="height:4em;width:3em"alt="Image Description">
+        </a>
+        <!-- End Logo -->
+
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg" id="navBar">
+          <ul class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
+            <li class="nav-item g-mx-20--lg">
+              <a routerLink="/" class="nav-link px-0">Home
+
+              </a>
+            </li>
+            <li class="nav-item g-mx-20--lg">
+              <a routerLink="/about" class="nav-link px-0">About
+
+              </a>
+            </li>
+            <li class="nav-item g-mx-20--lg">
+              <a routerLink="/courses" class="nav-link px-0">Courses
+
+              </a>
+            </li>
+            <li class="nav-item g-mx-20--lg">
+              <a routerLink="/instructors" class="nav-link px-0">Instructors
+
+              </a>
+            </li>
+            <li class="nav-item g-ml-20--lg g-mr-0--lg">
+              <a routerLink="/contact" class="nav-link px-0">Contact Us
+
+              </a>
+            </li>
+            <li class="nav-item ms-lg-auto">
+
+              <a routerLink="/login" class="btn btn-ghost-dark me-2 me-lg-0">Log in</a>
+              <a routerLink="/signup" class="btn btn-dark d-lg-none">
+                Sign up
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/signup" class="btn btn-dark d-none d-lg-inline-block">
+                Sign up
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- End Navigation -->
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!--<header id="header" class="navbar navbar-expand-lg navbar-center navbar-light bg-white">
+    <div class="container">
+        <nav class="js-mega-menu navbar-nav-wrap">
+            <a class="navbar-brand" href="../index.html" aria-label="Unify">
+                <img class="navbar-brand-logo" src="assets/img/160x160//icon-512x512.png" alt="Image Description">
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-default">
+                    <i class="bi-list"></i>
+                </span>
+                <span class="navbar-toggler-toggled">
+                    <i class="bi-x"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav nav-pills ml-auto">
+                    <li class="nav-item g-mx-15 g-mx-3&#45;&#45;lg g-mb-5 g-mb-0&#45;&#45;lg">
+                        <a routerLink="/" class="nav-link rounded g-color-primary&#45;&#45;hover g-bg-transparent g-bg-main&#45;&#45;hover g-font-weight-600 g-font-size-15 g-px-14 g-py-10">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item g-mx-15 g-mx-3&#45;&#45;lg g-mb-5 g-mb-0&#45;&#45;lg">
+                        <a routerLink="/about" class="nav-link rounded g-color-primary&#45;&#45;hover g-bg-transparent g-bg-main&#45;&#45;hover g-font-weight-600 g-font-size-15 g-px-14 g-py-10">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item g-mx-15 g-mx-3&#45;&#45;lg g-mb-5 g-mb-0&#45;&#45;lg">
+                        <a routerLink="/courses" class="nav-link rounded g-color-primary&#45;&#45;hover g-bg-transparent g-bg-main&#45;&#45;hover g-font-weight-600 g-font-size-15 g-px-14 g-py-10">
+                            Courses
+                        </a>
+                    </li>
+                    <li class="nav-item g-mx-15 g-mx-3&#45;&#45;lg g-mb-5 g-mb-0&#45;&#45;lg">
+                        <a routerLink="/instructors" class="nav-link rounded g-color-primary&#45;&#45;hover g-bg-transparent g-bg-main&#45;&#45;hover g-font-weight-600 g-font-size-15 g-px-14 g-py-10">
+                            Instructors
+                        </a>
+                    </li>
+                    <li class="nav-item g-mx-15 g-mx-3&#45;&#45;lg g-mb-5 g-mb-0&#45;&#45;lg">
+                        <a routerLink="/contact" class="nav-link rounded g-color-primary&#45;&#45;hover g-bg-transparent g-bg-main&#45;&#45;hover g-font-weight-600 g-font-size-15 g-px-14 g-py-10">
+                            Contact Us
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-auto">
+                        <a routerLink="/login" class="btn btn-ghost-dark me-2 me-lg-0">Log in</a>
+                        <a routerLink="/signup" class="btn btn-dark d-lg-none">
+                            Sign up
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/signup" class="btn btn-dark d-none d-lg-inline-block">
+                            Sign up
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>-->
+

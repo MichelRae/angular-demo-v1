@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Demo</title>
+        <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/vendor/icon-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/vendor/icon-line/css/simple-line-icons.css">
+        <link rel="stylesheet" href="assets/vendor/icon-etlinefont/style.css">
+        <link rel="stylesheet" href="assets/vendor/icon-line-pro/style.css">
+        <link rel="stylesheet" href="assets/vendor/icon-hs/style.css">
+        <link rel="stylesheet" href="assets/vendor/dzsparallaxer/dzsparallaxer.css">
+        <link rel="stylesheet" href="assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+        <link rel="stylesheet" href="assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+        <link rel="stylesheet" href="assets/vendor/slick-carousel/slick/slick.css">
+        <link rel="stylesheet" href="assets/vendor/animate.css">
+        <link rel="stylesheet" href="assets/vendor/hs-megamenu/src/hs.megamenu.css">
+        <link rel="stylesheet" href="assets/vendor/hamburgers/hamburgers.min.css">
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+
+        <link rel="stylesheet" href="assets/css/unify-admin.css">
+        <!-- CSS Unify -->
+        <link rel="stylesheet" href="assets/css/unify-core.css">
+        <link rel="stylesheet" href="assets/css/unify-components.css">
+        <link rel="stylesheet" href="assets/css/unify-globals.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/custom.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+    <body class="mat-typography">
+        <app-root></app-root>
+        <script src="assets/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+        <script src="assets/vendor/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script src="assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+        <script src="assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+        <script src="assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
+        <script src="assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+        <script src="assets/vendor/chosen/chosen.jquery.js"></script>
+        <script src="assets/vendor/image-select/src/ImageSelect.jquery.js"></script>
+        <script src="assets/vendor/masonry/dist/masonry.pkgd.min.js"></script>
+        <script src="assets/vendor/imagesloaded/imagesloaded.js"></script>
+        <script src="assets/vendor/slick-carousel/slick/slick.js"></script>
+        <!-- JS Unify -->
+        <script src="assets/js/hs.core.js"></script>
+        <script src="assets/js/components/hs.header.js"></script>
+        <script src="assets/js/helpers/hs.hamburgers.js"></script>
+        <script src="assets/js/components/hs.scroll-nav.js"></script>
+        <script src="assets/js/components/hs.go-to.js"></script>
+        <script src="assets/js/components/hs.sticky-block.js"></script>
+        <script src="assets/js/helpers/hs.height-calc.js"></script>
+        <script src="assets/js/components/hs.carousel.js"></script>
+        <!-- JS Unify -->
+        <script src="assets/js/hs.core.js"></script>
+
+        <!-- JS Custom -->
+        <script src="assets/js/custom.js"></script>
+        <script>
+          $(document).on('ready', function () {
+            // initialization of carousel
+            $.HSCore.components.HSCarousel.init('.js-carousel');
+
+            // Header
+            $.HSCore.components.HSHeader.init($('#js-header'));
+            $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+            // initialization of HSMegaMenu plugin
+            $('.js-mega-menu').HSMegaMenu({
+              event: 'hover',
+              pageContainer: $('.container'),
+              breakpoint: 991
+            });
+
+            // initialization of go to
+            $.HSCore.components.HSGoTo.init('.js-go-to');
+
+            $.HSCore.helpers.HSHeightCalc.init();
+          });
+
+          $(window).on('load', function () {
+            // initialization of HSScrollNav
+            $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
+              duration: 700,
+              over: $('.u-secondary-navigation')
+            });
+
+            // initialization of masonry.js
+            $('.masonry-grid').imagesLoaded().then(function () {
+              $('.masonry-grid').masonry({
+                // options
+                columnWidth: '.masonry-grid-sizer',
+                itemSelector: '.masonry-grid-item',
+                percentPosition: true
+              });
+            });
+
+            // initialization of sticky blocks
+            $.HSCore.components.HSStickyBlock.init('.js-sticky-block');
+          });
+        </script>
+
+        <script>
+          // Facebook Like
+          window.fbAsyncInit = function () {
+            // init the FB JS SDK
+            FB.init({
+              appId: '1972702999621713',
+              status: true,
+              xfbml: true,
+              version: 'v2.3'
+            });
+            if (typeof gaSocialTracking != 'undefined') gaSocialTracking.trackFacebook();
+            setTimeout(function () {
+              if (typeof window.fbCallback == 'function') {
+                window.fbCallback();
+              }
+            }, 3000); // to make sure FB was loaded
+          };
+          (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+          // Facebook Like
+
+          // Twitter Follow
+          window.twttr = (function (d, s, id) {
+            var t, js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            return window.twttr || (t = {
+              _e: [], ready: function (f) {
+                t._e.push(f)
+              }
+            });
+          }(document, "script", "twitter-wjs"));
+          twttr.ready(function (twttr) {
+            twttr.events.bind('tweet', function (event) {
+              if (typeof gaSocialTracking != 'undefined') gaSocialTracking.trackTwitter();
+            });
+          });
+          // Twitter Follow
+        </script>
+    </body>
+</html>
